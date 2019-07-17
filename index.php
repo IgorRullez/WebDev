@@ -15,7 +15,7 @@
             <?php while(have_posts()) { the_post(); ?>      
                 <div class="col-sm">
                     <div class="card" style="width: 18rem;">
-                        <img src="https://placehold.it/300x200" class="card-img-top" alt="..." >
+                        <img src="<? the_post_thumbnail($size = 'medium' , $attr = 'card-img-top');?>
                             <div class="card-body">
                                 <h5 class="card-title"><?php the_title()?></h5>
                                 <div class="card-text"><?php the_excerpt()?></div>
