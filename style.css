@@ -18,36 +18,36 @@ Version: 1.0
 */
 
 
-.naked-list{
+.naked-list {
     list-style: none;
     padding: 0;
 }
 
-.grid{
+.grid {
     display: flex;
     flex-wrap: wrap;
-    list-style: none;
-    padding: 0;
-
 }
 
-.grid-item{
-    width: 20%;
-    margin-left: 20px;
+.grid-item {
+    width: 40%;
 }
 
-.card img{
+.grid-item img {
     width: 100%;
+    height: 40%;
+} 
+
+
+.card {
+    box-shadow: 0 0 4px;
+    padding: 10;
+    margin-left: 5;
+    margin-bottom: 5px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column; 
 }
 
-.card{
-    box-shadow: 0 0 2px;
-    padding: 15px;
-    margin-bottom: 5px;
-    border-radius: 30px;
-    }
-.card a{
-    background: grey;
-    color: white;
-    
+.card h2 {
+    margin-top: 0;
 }
