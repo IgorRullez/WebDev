@@ -1,30 +1,30 @@
-<html>
 <head>
-    <title>True Fake News | This is your favorite and only trustworthy Fake News website!</title>
-    <link rel="stylesheet" href="http://truefakenews.local/wp-content/themes/TrueFakeNews_Default/style.css ">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <title>Foo News | News about the outer planet</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
-    
-    <h1>Latest News</h1>  
-        <div class="container">
-        <div class="row">
+    <h1>Latest News</h1>
 
-            <?php while(have_posts()) { the_post(); ?>      
+    <div class="container">
+        <div class="row">
+            <?php while (have_posts()) : the_post(); ?>
                 <div class="col-sm">
+
                     <div class="card" style="width: 18rem;">
-                        <img src="<? the_post_thumbnail($size = 'medium' , $attr = 'card-img-top');?>
-                            <div class="card-body">
-                                <h5 class="card-title"><?php the_title()?></h5>
-                                <div class="card-text"><?php the_excerpt()?></div>
-                            <a href="<?php the_permalink();?>"class="btn btn-primary">Read more</a>
+
+                        <?php the_post_thumbnail('thumbnail', ['class' => 'card-img-top']); ?>
+
+                        <div class="card-body">
+                            <h5 class="card-title"><?php the_title(); ?></h5>
+                            <div class="card-text"><?php the_excerpt(); ?></div>
+                            <a href="#" class="btn btn-primary">Read More</a>
                         </div>
                     </div>
+
                 </div>
-            <?php } ?>
+            <?php endwhile ?>
         </div>
-        </div>
+    </div>
+
 </body>
-<html

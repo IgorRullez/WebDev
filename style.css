@@ -18,3 +18,33 @@ Version: 1.0
 */
 
 
+.naked-list {
+    list-style: none;
+    padding: 0;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-item {
+    width: 30%;
+}
+
+.grid-item img {
+    width: 100%;
+}
+
+
+.card {
+    box-shadow: 0 0 6px;
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 6px;
+}
+
+
+.card h2 {
+    margin-top: 0;
+}
